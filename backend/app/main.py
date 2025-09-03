@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.entrypoints.http.routers.search import router as search_router
+from app.entrypoints.http.routers.item import router as item_router
 
 app = FastAPI(title="Content Vault")
 
@@ -23,3 +24,4 @@ def health():
     return {"ok": True}
 
 app.include_router(search_router, prefix="/api")
+app.include_router(item_router, prefix="/api")

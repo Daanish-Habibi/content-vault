@@ -12,3 +12,9 @@ class SearchResponse(BaseModel):
     query: str
     count: int
     items: list[ContentItem]
+
+class ContentDetail(ContentItem):
+    synopsis: Optional[str] = None
+    episodes: Optional[int] = None
+    genres: List[str] = []
+    trailer: Optional[HttpUrl] = None
