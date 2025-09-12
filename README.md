@@ -3,8 +3,8 @@
 It’s a simple anime browser: a FastAPI backend proxies the Jikan API, and a Next.js frontend shows anime cards and basic site stats
 
 Small monorepo:
-- **Backend**: FastAPI proxy to the public **Jikan** API (no DB). Adds a tiny cache for `/api/stats`.
-- **Frontend**: Next.js (App Router) that renders a landing grid (8 anime) + a full anime page.
+- **Backend**: FastAPI proxy to the public **Jikan** API.
+- **Frontend**: Next.js (App Router)
 
 ---
 
