@@ -1,0 +1,40 @@
+<!-- AniVault Database – Glow Icon (transparent bg with filter) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="AniVault icon with glow">
+  <defs>
+    <mask id="cutouts">
+      <rect width="256" height="256" fill="white"></rect>
+      <circle cx="128" cy="128" r="64" fill="black"></circle>
+      <circle cx="128" cy="128" r="14" fill="black"></circle>
+      <rect x="122" y="22" width="12" height="26" rx="6" fill="black"></rect>
+      <rect x="208" y="122" width="26" height="12" rx="6" fill="black"></rect>
+      <rect x="122" y="208" width="12" height="26" rx="6" fill="black"></rect>
+      <rect x="22" y="122" width="26" height="12" rx="6" fill="black"></rect>
+      <path d="M128 128 L176 80 L170 74 L128 116 Z" fill="black"></path>
+      <path d="M128 128 L80 80 L86 74 L128 116 Z" fill="black"></path>
+      <path d="M128 128 L176 176 L170 182 L128 140 Z" fill="black"></path>
+      <path d="M128 128 L80 176 L86 182 L128 140 Z" fill="black"></path>
+    </mask>
+
+    <!-- soft orange halo; feel free to tweak stdDeviation and flood-opacity -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="14" result="blur"></feGaussianBlur>
+      <feFlood flood-color="#FF7F2A" flood-opacity="0.65"></feFlood>
+      <feComposite in2="blur" operator="in" result="colored"></feComposite>
+      <feMerge>
+        <feMergeNode in="colored"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#glow)">
+    <circle cx="128" cy="128" r="112" fill="#FF7F2A" mask="url(#cutouts)"></circle>
+    <g stroke="#FF7F2A" stroke-width="18" stroke-linecap="round">
+      <line x1="128" y1="128" x2="178" y2="78"></line>
+      <line x1="128" y1="128" x2="78" y2="78"></line>
+      <line x1="128" y1="128" x2="178" y2="178"></line>
+      <line x1="128" y1="128" x2="78" y2="178"></line>
+    </g>
+    <circle cx="128" cy="128" r="18" fill="#FF7F2A"></circle>
+  </g>
+</svg>

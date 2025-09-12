@@ -1,0 +1,39 @@
+<!-- AniVault Database – Flat Icon (transparent bg) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="AniVault icon">
+  <!-- color tweak: change #FF7F2A if you want a different orange -->
+  <defs>
+    <!-- We use a mask to punch small rounded slots and the inner ring gap -->
+    <mask id="cutouts">
+      <!-- start fully opaque -->
+      <rect width="256" height="256" fill="white"></rect>
+      <!-- inner ring gap (donut) -->
+      <circle cx="128" cy="128" r="64" fill="black"></circle>
+      <!-- center hub hole (we'll overlay a hub later; this removes the 'target' feel) -->
+      <circle cx="128" cy="128" r="14" fill="black"></circle>
+      <!-- slots (N/E/S/W) -->
+      <rect x="122" y="22" width="12" height="26" rx="6" fill="black"></rect>
+      <rect x="208" y="122" width="26" height="12" rx="6" fill="black"></rect>
+      <rect x="122" y="208" width="12" height="26" rx="6" fill="black"></rect>
+      <rect x="22" y="122" width="26" height="12" rx="6" fill="black"></rect>
+      <!-- “between-spokes” wedges: cut small triangular notches so spokes read diagonal -->
+      <path d="M128 128 L176 80 L170 74 L128 116 Z" fill="black"></path>
+      <path d="M128 128 L80 80 L86 74 L128 116 Z" fill="black"></path>
+      <path d="M128 128 L176 176 L170 182 L128 140 Z" fill="black"></path>
+      <path d="M128 128 L80 176 L86 182 L128 140 Z" fill="black"></path>
+    </mask>
+  </defs>
+
+  <!-- outer disk with mask removing ring gap, hub hole, slots, and tiny wedges -->
+  <circle cx="128" cy="128" r="112" fill="#FF7F2A" mask="url(#cutouts)"></circle>
+
+  <!-- spokes (solid diagonals from hub to ring) -->
+  <g stroke="#FF7F2A" stroke-width="18" stroke-linecap="round">
+    <line x1="128" y1="128" x2="178" y2="78"></line>
+    <line x1="128" y1="128" x2="78" y2="78"></line>
+    <line x1="128" y1="128" x2="178" y2="178"></line>
+    <line x1="128" y1="128" x2="78" y2="178"></line>
+  </g>
+
+  <!-- hub (solid) -->
+  <circle cx="128" cy="128" r="18" fill="#FF7F2A"></circle>
+</svg>
