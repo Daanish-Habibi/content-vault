@@ -20,12 +20,16 @@ Copy the examples and edit as needed:
 ```bash
 cp backend/.env.example backend/.env.local
 cp frontend/.env.example frontend/.env.local
+```
 
+### 3) Setup of Backend
+
+```bash
 ## Run the backend
 
 cd backend
-python -m venv .venv
-. .venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
